@@ -53,7 +53,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 
   hi Search guifg=#8be9fd guibg=NONE gui=bold  "#302b30
   hi IncSearch guifg=#8be9fd guibg=NONE guisp=#8897F4 gui=bold
-  hi Visual guifg=NONE guibg=#262440 blend=10
+  hi Visual guifg=NONE guibg=#262440 
   hi EndOfBuffer guifg=#E9729D guibg=NONE
   hi Folded guifg=#53606e guibg=#171526
   hi FoldColumn guifg=#6161b3 guibg=NONE
@@ -63,8 +63,8 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi Ignore guifg=#53606e guibg=NONE
 
   hi FloatermNC guifg=#6161b3
-  hi FloatermBorder guifg=#ff79c6 guibg=NONE blend=0
-  hi Floating guifg=#6272a4 guibg=NONE blend=0
+  hi FloatermBorder guifg=#ff79c6 guibg=NONE 
+  hi Floating guifg=#6272a4 guibg=NONE 
 
   hi Error guifg=#ac2958 guibg=#21131f      "#301626 
   hi ErrorMsg guifg=#ff8170 guibg=#291c22   "#41272a 
@@ -107,7 +107,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi Conditional guifg=#6876de guibg=NONE
   hi Repeat guifg=#6876de guibg=NONE
   hi Label guifg=#bc6bd0 guibg=NONE
-  hi Operator guifg=#6272a4 guibg=bold
+  hi Operator guifg=#6272a4 gui=bold
   hi Exception guifg=#943d84 guibg=NONE
   hi Keyword guifg=#ff7ab2 guibg=NONE gui=bold
   
@@ -155,142 +155,27 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi PmenuThumb guifg=NONE guibg=#1b1b29
 
   hi NormalFloat guibg=NONE
-  hi FloatBorder guifg=#ff79c6 guibg=NONE blend=0
-  hi FloatTitle guifg=#bd93f9 guibg=NONE blend=0
+  hi FloatBorder guifg=#ff79c6 guibg=NONE 
+  hi FloatTitle guifg=#bd93f9 guibg=NONE 
 
   " Treesitter
-  hi link @text.title Title
-  hi link @definition.import Define
-  hi link @definition.namespace Define
-  hi link @namespace Pmenu
-  hi link @definition.macro Define
-  hi link @include Define
-  hi link @variable Identifier
-  hi link @variable.builtin Define
-  hi link @definition.var @variable
-  hi @field guifg=#E9729D guibg=NONE
-  hi link @definition.field @field
-  hi @parameter guifg=#9ca7ff guibg=NONE
-  hi link @punctuation.special Include
-  hi link @text.warning WarnMsg
-  hi link @text.danger Error
-  hi link @error Error
+  " hi link @text.title Title
+  " hi link @definition.import Define
+  " hi link @definition.namespace Define
+  " hi link @namespace Pmenu
+  " hi link @definition.macro Define
+  " hi link @include Define
+  " hi link @variable Identifier
+  " hi link @variable.builtin Define
+  " hi link @definition.var @variable
+  " hi @field guifg=#E9729D guibg=NONE
+  " hi link @definition.field @field
+  " hi @parameter guifg=#9ca7ff guibg=NONE
+  " hi link @punctuation.special Include
+  " hi link @text.warning WarnMsg
+  " hi link @text.danger Error
+  " hi link @error Error
 
-  " Neorg
-  hi link @attribute Title
-  " Neorg Markers
-  hi link @neorg.markers.prefix Directory
-  hi link @neorg.markers.title DocComment
-  " Neorg Headings
-  hi link @neorg.headings.2.prefix String
-  hi link @neorg.headings.2.title String
-  hi link @neorg.headings.3.prefix Conditional
-  hi link @neorg.headings.3.title Conditional
-  hi link @neorg.headings.4.prefix htmlH1
-  hi link @neorg.headings.4.title htmlH1
-  hi link @neorg.headings.5.prefix Special
-  hi link @neorg.headings.5.title Special
-  hi link @neorg.headings.6.prefix Type
-  hi link @neorg.headings.6.title Type
-  " Neorg Quotes
-  hi link @neorg.quotes.1.prefix DocComment
-  hi link @neorg.quotes.1.content Comment
-  hi link @neorg.quotes.2.prefix DocComment
-  hi link @neorg.quotes.2.content Comment
-  hi link @neorg.quotes.3.prefix DocComment
-  hi link @neorg.quotes.3.content Comment
-  hi link @neorg.quotes.4.prefix DocComment
-  hi link @neorg.quotes.4.content Comment
-  hi link @neorg.quotes.5.prefix DocComment
-  hi link @neorg.quotes.5.content Comment
-  hi link @neorg.quotes.6.prefix DocComment
-  hi link @neorg.quotes.6.content Comment
-  " Neorg Delimiters
-  hi link @neorg.delimiters.weak Comment
-  hi link @neorg.delimiters.strong NonText
-  hi link @neorg.delimiters.horizontal_line Exception
-  " Neorg Lists
-  hi link @neorg.delimiters.weak Comment
-  " Neorg Todos
-  hi TodoNorm guifg=#cba6f7
-  hi link @neorg.todo_items.uncertain.1 WarnMsg
-  hi link @neorg.todo_items.uncertain.2 WarnMsg
-  hi link @neorg.todo_items.uncertain.3 WarnMsg
-  hi link @neorg.todo_items.uncertain.4 WarnMsg
-  hi link @neorg.todo_items.uncertain.5 WarnMsg
-  hi link @neorg.todo_items.uncertain.6 WarnMsg
-  hi link @neorg.todo_items.uncertain.1.content TodoNorm
-  hi link @neorg.todo_items.uncertain.2.content TodoNorm
-  hi link @neorg.todo_items.uncertain.3.content TodoNorm
-  hi link @neorg.todo_items.uncertain.4.content TodoNorm
-  hi link @neorg.todo_items.uncertain.5.content TodoNorm
-  hi link @neorg.todo_items.uncertain.6.content TodoNorm
-  hi link @neorg.todo_items.done.1 Title
-  hi link @neorg.todo_items.done.2 Title
-  hi link @neorg.todo_items.done.3 Title
-  hi link @neorg.todo_items.done.4 Title
-  hi link @neorg.todo_items.done.5 Title
-  hi link @neorg.todo_items.done.6 Title
-  hi link @neorg.todo_items.done.1.content TodoNorm
-  hi link @neorg.todo_items.done.2.content TodoNorm
-  hi link @neorg.todo_items.done.3.content TodoNorm
-  hi link @neorg.todo_items.done.4.content TodoNorm
-  hi link @neorg.todo_items.done.5.content TodoNorm
-  hi link @neorg.todo_items.done.6.content TodoNorm
-  hi link @neorg.todo_items.urgent.1.content TodoNorm
-  hi link @neorg.todo_items.urgent.2.content TodoNorm
-  hi link @neorg.todo_items.urgent.3.content TodoNorm
-  hi link @neorg.todo_items.urgent.4.content TodoNorm
-  hi link @neorg.todo_items.urgent.5.content TodoNorm
-  hi link @neorg.todo_items.urgent.6.content TodoNorm
-  hi link @neorg.todo_items.recurring.1.content TodoNorm
-  hi link @neorg.todo_items.recurring.2.content TodoNorm
-  hi link @neorg.todo_items.recurring.3.content TodoNorm
-  hi link @neorg.todo_items.recurring.4.content TodoNorm
-  hi link @neorg.todo_items.recurring.5.content TodoNorm
-  hi link @neorg.todo_items.recurring.6.content TodoNorm
-  hi link @neorg.todo_items.undone.1.content TodoNorm
-  hi link @neorg.todo_items.undone.2.content TodoNorm
-  hi link @neorg.todo_items.undone.3.content TodoNorm
-  hi link @neorg.todo_items.undone.4.content TodoNorm
-  hi link @neorg.todo_items.undone.5.content TodoNorm
-  hi link @neorg.todo_items.undone.6.content TodoNorm
-  hi link @neorg.todo_items.on_hold.1 Comment
-  hi link @neorg.todo_items.on_hold.2 Comment
-  hi link @neorg.todo_items.on_hold.3 Comment
-  hi link @neorg.todo_items.on_hold.4 Comment
-  hi link @neorg.todo_items.on_hold.5 Comment
-  hi link @neorg.todo_items.on_hold.6 Comment
-  hi link @neorg.todo_items.on_hold.1.content TodoNorm
-  hi link @neorg.todo_items.on_hold.2.content TodoNorm
-  hi link @neorg.todo_items.on_hold.3.content TodoNorm
-  hi link @neorg.todo_items.on_hold.4.content TodoNorm
-  hi link @neorg.todo_items.on_hold.5.content TodoNorm
-  hi link @neorg.todo_items.on_hold.6.content TodoNorm
-  hi link @neorg.tags.carryover.target TodoNorm
-  " Neorg Markup
-  hi @neorg.markup.verbatim guibg=#18171c guifg=#cba6f7
-  " Neorg Tags
-  hi link @neorg.tags.carryover.begin Define
-  hi link @neorg.tags.carryover.name.delimiter Comment
-  " Neorg Lists
-  hi link @neorg.lists.ordered.1.prefix Include
-  hi link @neorg.lists.ordered.2.prefix Include
-  hi link @neorg.lists.ordered.3.prefix Include
-  hi link @neorg.lists.ordered.4.prefix Include
-  hi link @neorg.lists.ordered.5.prefix Include
-  hi link @neorg.lists.ordered.6.prefix Include
-  hi link @neorg.lists.unordered.1.prefix Include
-  hi link @neorg.lists.unordered.2.prefix Include
-  hi link @neorg.lists.unordered.3.prefix Include
-  hi link @neorg.lists.unordered.4.prefix Include
-  hi link @neorg.lists.unordered.5.prefix Include
-  hi link @neorg.lists.unordered.6.prefix Include
-  " Neorg Definitions
-  hi link @neorg.definitions.prefix String
-  hi link @neorg.definitions.title Title
-  hi link @neorg.definitions.suffix String
-  hi link @neorg.definitions.content @neorg.tags.carryover.target
 
   " Treesitter Markdown
   hi htmlH1 guifg=#bd93f9
@@ -343,13 +228,6 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi TelescopePromptPrefix guifg=#ff7ab2 
   hi TelescopeTitle guifg=#ff7ab2 guibg=NONE
 
-  " Nvim-Cmp
-  hi CmpItemAbbr guifg=#8677d9
-  hi CmpItemAbbrMatch guifg=#e086e0 gui=bold
-  hi CmpItemAbbrDeprecated guifg=#ac295
-  hi CmpItemAbbrMatchFuzzy guifg=#bd93f9
-  hi CmpItemKind guifg=#FF4971
-  hi CmpItemMenu guifg=#ff7ab2
   
   " Beacon
   hi Beacon guibg=#1b1b29
@@ -383,17 +261,17 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi BookmarkAnnotationLine guibg=NONE guifg=NONE
 
   " IndentBlankLine
-  hi IndentBlanklineIndent1 guifg=#1b1b29 guibg=NONE blend=10
-  hi IndentBlanklineIndent2 guifg=#1b1b29 guibg=NONE blend=10
-  hi IndentBlanklineIndent3 guifg=#1b1b29 guibg=NONE blend=10
-  hi IndentBlanklineIndent4 guifg=#1b1b29 guibg=NONE blend=10
-  hi IndentBlanklineIndent5 guifg=#1b1b29 guibg=NONE blend=10
-  hi IndentBlanklineIndent6 guifg=#1b1b29 guibg=NONE blend=10
+  hi IndentBlanklineIndent1 guifg=#1b1b29 guibg=NONE 
+  hi IndentBlanklineIndent2 guifg=#1b1b29 guibg=NONE 
+  hi IndentBlanklineIndent3 guifg=#1b1b29 guibg=NONE 
+  hi IndentBlanklineIndent4 guifg=#1b1b29 guibg=NONE 
+  hi IndentBlanklineIndent5 guifg=#1b1b29 guibg=NONE 
+  hi IndentBlanklineIndent6 guifg=#1b1b29 guibg=NONE 
 
   " CodeLens
-  hi LspCodeLens guifg=#5d5daf guibg=NONE blend=10
-  hi LspCodeLensSeparator guifg=#6272a4 guibg=NONE blend=10
-  hi LspSignatureActiveParameter guifg=#6272a4 guibg=NONE blend=10
+  hi LspCodeLens guifg=#5d5daf guibg=NONE 
+  hi LspCodeLensSeparator guifg=#6272a4 guibg=NONE 
+  hi LspSignatureActiveParameter guifg=#6272a4 guibg=NONE
 
   " NvimTree
   hi NvimTreeWindowPicker guifg=#de286e guibg=NONE gui=bold
@@ -406,7 +284,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   " Cybu
   hi link CybuFocus EndOfBuffer
   hi link CybuAdjacent FloatermNC
-  hi CybuBackground guifg=NONE guibg=#000000 blend=10
+  hi CybuBackground guifg=NONE guibg=#000000 
   hi link CybuBorder FloatermBorder
 
   " Winbar
@@ -458,10 +336,10 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi AlphaLogo guifg=#6a5acd guibg=NONE
 
   " Lualine
-  hi LualineDiagnosticError guifg=#ac2958 guibg=#111119 blend=10
-  hi LualineDiagnosticWarn  guifg=#F18FB0 guibg=#111119 blend=10
-  hi LualineDiagnosticInfo  guifg=#fca1e7 guibg=#111119 blend=10
-  hi LualineDiagnosticHint  guifg=#849be0 guibg=#111119 blend=10
+  hi LualineDiagnosticError guifg=#ac2958 guibg=#111119 
+  hi LualineDiagnosticWarn  guifg=#F18FB0 guibg=#111119 
+  hi LualineDiagnosticInfo  guifg=#fca1e7 guibg=#111119 
+  hi LualineDiagnosticHint  guifg=#849be0 guibg=#111119 
   
   " Which Key
   hi link WhichKey Function
